@@ -1,3 +1,6 @@
+// Basic 4/4 Rock Beat
+// script @by jimthurston
+
 setcpm(120/4)
-$: s("hh!7 oh").bank("tr909")
-$: s("bd sd bd sd").bank("tr909")
+$: s("hh!7 oh").bank("alesissr16").gain("[.6 .3]*4")
+$: s("bd sd bd sd").bank("alesissr16")
