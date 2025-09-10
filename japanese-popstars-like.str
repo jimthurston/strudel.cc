@@ -4,12 +4,15 @@
 setcpm(120/4)
 
 $: sound("bd*4").bank("tr909")
-$: sound("sd*4").bank("ajkpercusyn")
-$: sound("hh!7 oh").bank("alesissr16").gain("[.6 .3]*4")
+$: sound("[~ sd]*2, ~!13 sd").bank("ajkpercusyn")
+$: sound("hh*16").bank("9000").gain(sine.range(0.1, 0.25).fast(4))
 
-$: note("<- [d4 a4] g4 e4 - [f#4 d4] c4 a3>*4")
+$: note(`<
+~ ~ ~ d4@2 ~ a4@2 g4@2 ~ ~ e4@2 ~ ~
+~ ~ ~ f#4@2 ~ d4@2 c4@2 ~ ~ a3@2 ~ ~
+>*16`)
   .sound("gm_lead_1_square")
-  .attack(0.07)
-  .decay(0.25)
-  .lpf(sine.range(1, 8000).fast(1))
-  .lpa(.0.5)
+//  .attack(0.07)
+//  .decay(0.25)
+  .lpf(sine.range(1, 4000).fast(8))
+  .lpa(500)
