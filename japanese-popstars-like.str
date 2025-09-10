@@ -1,4 +1,15 @@
+// A bit like Japanese Popstars
+// script @by jimthurston
+
 setcpm(120/4)
-//$: s("hh!7 oh").bank("tr909")
-//$: s("bd sd bd sd").bank("tr909")
-$: note("- d4 a4 g4@2 e4@2 - f#4 d4 c4@4 a3@3")
+
+$: sound("bd*4").bank("tr909")
+$: sound("sd*4").bank("ajkpercusyn")
+$: sound("hh!7 oh").bank("alesissr16").gain("[.6 .3]*4")
+
+$: note("<- [d4 a4] g4 e4 - [f#4 d4] c4 a3>*4")
+  .sound("gm_lead_1_square")
+  .attack(0.07)
+  .decay(0.25)
+  .lpf(sine.range(1, 8000).fast(1))
+  .lpa(.0.5)
