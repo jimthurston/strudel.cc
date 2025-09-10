@@ -1,0 +1,4 @@
+setcpm(120/4)
+//$: s("hh!7 oh").bank("tr909")
+//$: s("bd sd bd sd").bank("tr909")
+$: note("- d4 a4 g4@2 e4@2 - f#4 d4 c4@4 a3@3")
