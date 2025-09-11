@@ -23,9 +23,19 @@ $: note("d2 a3 c#3 a3 c#3 d2 a3 c#3, - d3 e3 d3 f#3 - d3 e3").sound("xylophone_s
 
 // player 4
 $: note("-")
+//$: note("- - - - - - c#3 -, - - - - - - f#3 -").sound("xylophone_soft_ff").room(.2)
+//$: note("- - d2 - - - c#3 -, - - - - - - f#3 -").sound("xylophone_soft_ff").room(.2)
+//$: note("- - d2 - c#3 - c#3 -, - - - - e3 - f#3 -").sound("xylophone_soft_ff").room(.2)
+//$: note("- - d2 a2 c#3 - c#3 -, - - - d3 e3 - f#3 -").sound("xylophone_soft_ff").room(.2)
+//$: note("- c#3 d2 a2 c#3 - c#3 -, - e3 - d3 e3 - f#3 -").sound("xylophone_soft_ff").room(.2)
 
 // player 5
 $: note("-")
+//$: note("- - - - - - c#3 -, - - - - - - f#3 -").sound("xylophone_soft_ff").room(.2)
+//$: note("- - d2 - - - c#3 -, - - - - - - f#3 -").sound("xylophone_soft_ff").room(.2)
+//$: note("- - d2 - c#3 - c#3 -, - - - - e3 - f#3 -").sound("xylophone_soft_ff").room(.2)
+//$: note("- - d2 a2 c#3 - c#3 -, - - - d3 e3 - f#3 -").sound("xylophone_soft_ff").room(.2)
+//$: note("- c#3 d2 a2 c#3 - c#3 -, - e3 - d3 e3 - f#3 -").sound("xylophone_soft_ff").room(.2)
 
 // player 6
 $: note("f#3 b3 c#4 b3 c#4 f#3 b3 c#4, - d4 e4 d4 f#4 - d4 e4").sound("xylophone_soft_ff").gain(0.5).room(.2)
