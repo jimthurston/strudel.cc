@@ -5,6 +5,14 @@
 
 setcpm(192/4)
 
+/* instruments
+xylophone_soft_ff
+xylophone_medium_ff
+marimba
+gm_marimba
+gm_xylophone
+*/
+
 // player 1
 $: note("f#3 b3 c#4 b3 c#4 f#3 b3 c#4, - d4 e4 d4 f#4 - d4 e4").sound("xylophone_soft_ff").gain(0.5)
 
