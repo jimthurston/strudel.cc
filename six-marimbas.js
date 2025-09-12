@@ -25,7 +25,7 @@ p2[1] = "b2 e3 f#3 e3 f#3 b2 e3 f#3, - g3 a3 g3 b3 - g3 a3"
 p3[1] = "d2 a3 c#3 a3 c#3 d2 a3 c#3, - d3 e3 d3 f#3 - d3 e3"
 p4[1] = p5[1] = "-"
 
-p4[2] = p5[2] "- - - - - - c#3 -, - - - - - - f#3 -"
+p4[2] = p5[2] = "- - - - - - c#3 -, - - - - - - f#3 -"
 
 p4[3] = p5[3] = " - - d2 - - - c#3 -, - - - - - - f#3 -"
 p4[4] = p5[4] = " - - d2 - c#3 - c#3 -, - - - - e3 - f#3 -"
@@ -37,19 +37,6 @@ p4[9] = p5[9] = " a2 c#3 d2 a2 c#3 a2 c#3 d2, d3 e3 - d3 e3 d3 f#3 -"
 
 p6[10] = "- d3 c#3 d3 f#3 - f#4 e4, - - - - - - - f#4"
 
-
-// declare which part we're on
-let currentPart = 1
-//currentPart = 2
-//currentPart = 3
-//currentPart = 4
-//currentPart = 5
-//currentPart = 6
-//currentPart = 7
-//currentPart = 8
-//currentPart = 9
-//currentPart = 10
-
 // set the initial part for all players
 var player1 = p1[1]
 var player2 = p2[1]
@@ -57,6 +44,19 @@ var player3 = p3[1]
 var player4 = p4[1]
 var player5 = p5[1]
 var player6 = p6[1]
+
+
+// declare which part we're on
+var currentPart = 1
+currentPart = 2
+currentPart = 3
+currentPart = 4
+currentPart = 5
+currentPart = 6
+currentPart = 7
+currentPart = 8
+currentPart = 9
+currentPart = 10
 
 // use currentPart to determine what each player is playing.  If there isn't one don't change it for this player
 if(typeof p1[currentPart] !== 'undefined') 
