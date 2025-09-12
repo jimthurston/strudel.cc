@@ -25,14 +25,14 @@ f#3  b3   c#4  b3   c#4  f#3  b3   c#4,
 `
 
 let players45 = "-"
-//players45 = "- - - - - - c#3 -, - - - - - - f#3 -"
-//players45 = " - - d2 - - - c#3 -, - - - - - - f#3 -"
-//players45 = " - - d2 - c#3 - c#3 -, - - - - e3 - f#3 -"
-//players45 = " - - d2 a2 c#3 - c#3 -, - - - d3 e3 - f#3 -"
-//players45 = " - c#3 d2 a2 c#3 - c#3 -, - e3 - d3 e3 - f#3 -"
-//players45 = " - c#3 d2 a2 c#3 - c#3 d2, - e3 - d3 e3 - f#3 -"
-//players45 = " - c#3 d2 a2 c#3 a2 c#3 d2, - e3 - d3 e3 d3 f#3 -"
-//players45 = " a2 c#3 d2 a2 c#3 a2 c#3 d2, d3 e3 - d3 e3 d3 f#3 -"
+players45 = "- - - - - - c#3 -, - - - - - - f#3 -"
+players45 = " - - d2 - - - c#3 -, - - - - - - f#3 -"
+players45 = " - - d2 - c#3 - c#3 -, - - - - e3 - f#3 -"
+players45 = " - - d2 a2 c#3 - c#3 -, - - - d3 e3 - f#3 -"
+players45 = " - c#3 d2 a2 c#3 - c#3 -, - e3 - d3 e3 - f#3 -"
+players45 = " - c#3 d2 a2 c#3 - c#3 d2, - e3 - d3 e3 - f#3 -"
+players45 = " - c#3 d2 a2 c#3 a2 c#3 d2, - e3 - d3 e3 d3 f#3 -"
+players45 = " a2 c#3 d2 a2 c#3 a2 c#3 d2, d3 e3 - d3 e3 d3 f#3 -"
 
 
 // players 1, 2, 3, 6
@@ -40,11 +40,21 @@ $: note(players1236)
   .sound(instrument)
   .gain(gainMain)
   .room(reverb)
-  .pan(0.5)
+//  .pan("0 0 0.33 0.33 0.66 0.66 1 1")
 
 // players 4 & 5 (start) - uncomment to bring each part in
 $: note(players45)
   .sound(instrument)
-  .gain(gainOthers)
+//  .gain(gainOthers)
+  .gain(gainMain)
   .room(reverb)
   .pan(0.5)
+
+let bar12 = "- d3 c#3 d3 f#3 - f#4 e4, - - - - - - - f#4"
+
+$: note(bar12)
+  .sound(instrument)
+//  .gain(gainOthers)
+  .gain(gainMain)
+  .room(reverb)
+  .pan(0.5) 
