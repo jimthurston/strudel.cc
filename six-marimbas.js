@@ -3,12 +3,19 @@
 // script by jimthurston
 // https://www.youtube.com/watch?v=cbbX1f5p7Lo
 
+samples
+(
+  {
+    marimba: ['Marimba_hit_Outrigger_C2_loud_01.wav', 'Marimba_hit_Outrigger_C4_loud_01.wav', 'Marimba_hit_Outrigger_C6_loud_01.wav'],
+  }, 'https://raw.githubusercontent.com/sgossner/VCSL/refs/heads/master/Idiophones/Struck%20Idiophones/Marimba/'
+);
+
 setcpm(192/4)
 
-const instrument = "xylophone_soft_ff" //xylophone_medium_ff, marimba too quiet!
-const gainMain = 0.5
-const gainOthers = 1.5
-const reverb = 0.2
+const instrument = "marimba:0" //xylophone_medium_ff, marimba too quiet!
+const gainMain = 1
+const gainOthers = 2
+const reverb = 0.25
 
 //all(pianoroll)
 
@@ -48,15 +55,15 @@ var player6 = p6[1]
 
 // declare which part we're on
 var currentPart = 1
-currentPart = 2
-currentPart = 3
-currentPart = 4
-currentPart = 5
-currentPart = 6
-currentPart = 7
-currentPart = 8
-currentPart = 9
-currentPart = 10
+//currentPart = 2
+//currentPart = 3
+//currentPart = 4
+//currentPart = 5
+//currentPart = 6
+//currentPart = 7
+//currentPart = 8
+//currentPart = 9
+//currentPart = 10
 
 // use currentPart to determine what each player is playing.  If there isn't one don't change it for this player
 if(typeof p1[currentPart] !== 'undefined') 
