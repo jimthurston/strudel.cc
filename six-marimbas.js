@@ -12,6 +12,102 @@ const reverb = 0.2
 
 //all(pianoroll)
 
+// set up all the parts as arrays per player
+var p1 = []
+var p2 = []
+var p3 = []
+var p4 = []
+var p5 = []
+var p6 = []
+
+p1[1] = "f#3  b3   c#4  b3   c#4  f#3  b3   c#4,  -    d4   e4   d4   f#4  -    d4   e4"
+p2[1] = "b2   e3   f#3  e3   f#3  b2   e3   f#3,  -    g3   a3   g3   b3   -    g3   a3"
+p3[1] = "d2   a3   c#3  a3   c#3  d2   a3   c#3,  -    d3   e3   d3   f#3  -    d3   e3"
+p4[1] = "-"
+p5[1] = "-"
+p6[1] = p1[1]
+
+p4[2] = "- - - - - - c#3 -, - - - - - - f#3 -"
+p5[2] = p4[2]
+
+// declare which part we're on
+let currentPart = 1
+currentPart = 2
+
+// ensure we have something set for all players at the start
+var player1 = p1[1]
+var player2 = p2[1]
+var player3 = p3[1]
+var player4 = p4[1]
+var player5 = p5[1]
+var player6 = p6[1]
+
+// use this current part to determine what each player is playing.  If there isn't one don't change it for this player
+if(typeof p1[currentPart] !== 'undefined') 
+  player1 = p1[currentPart]
+
+if(typeof p2[currentPart] !== 'undefined') 
+  player2 = p2[currentPart]
+
+if(typeof p3[currentPart] !== 'undefined') 
+  player3 = p3[currentPart]
+
+if(typeof p4[currentPart] !== 'undefined') 
+  player4 = p4[currentPart]
+
+if(typeof p5[currentPart] !== 'undefined') 
+  player5 = p5[currentPart]
+
+if(typeof p6[currentPart] !== 'undefined') 
+  player6 = p6[currentPart]
+
+
+// play the notes
+
+// player 1
+$: note(player1)
+  .sound(instrument)
+  .gain(gainMain)
+  .room(reverb)
+  .pan(0)
+
+// player 2
+$: note(player2)
+  .sound(instrument)
+  .gain(gainMain)
+  .room(reverb)
+  .pan(1)
+
+// player 3
+$: note(player3)
+  .sound(instrument)
+  .gain(gainMain)
+  .room(reverb)
+  .pan(0.33)
+
+// player 4
+$: note(player4)
+  .sound(instrument)
+  .gain(gainMain)
+  .room(reverb)
+  .pan(0.66)
+
+// player 5
+$: note(player5)
+  .sound(instrument)
+  .gain(gainMain)
+  .room(reverb)
+  .pan(0.5)
+
+// player 6
+$: note(player6)
+  .sound(instrument)
+  .gain(gainMain)
+  .room(reverb)
+  .pan(0.5)
+
+
+/*
 let players1236 =
 `
 f#3  b3   c#4  b3   c#4  f#3  b3   c#4,
@@ -34,27 +130,45 @@ players45 = " - c#3 d2 a2 c#3 - c#3 d2, - e3 - d3 e3 - f#3 -"
 players45 = " - c#3 d2 a2 c#3 a2 c#3 d2, - e3 - d3 e3 d3 f#3 -"
 players45 = " a2 c#3 d2 a2 c#3 a2 c#3 d2, d3 e3 - d3 e3 d3 f#3 -"
 
-
 // players 1, 2, 3, 6
 $: note(players1236)
   .sound(instrument)
   .gain(gainMain)
   .room(reverb)
-//  .pan("0 0 0.33 0.33 0.66 0.66 1 1")
+
+// player 2
+//$: note("b2 e3 f#3 e3 f#3 b2 e3 f#3, - g3 a3 g3 b3 - g3 a3").sound(instrument).gain(gainMain).room(reverb).pan(0.3)
+
+// player 3
+//$: note("d2 a3 c#3 a3 c#3 d2 a3 c#3, - d3 e3 d3 f#3 - d3 e3").sound(instrument).gain(gainMain).room(reverb).pan(0.7)
 
 // players 4 & 5 (start) - uncomment to bring each part in
 $: note(players45)
   .sound(instrument)
-//  .gain(gainOthers)
-  .gain(gainMain)
+  .gain(gainOthers)
   .room(reverb)
-  .pan(0.5)
 
-let bar12 = "- d3 c#3 d3 f#3 - f#4 e4, - - - - - - - f#4"
+//$: note("- - d2 - - - - -, - - - - - - - -").sound(instrument).gain(gainOthers).room(reverb)
+//$: note("- - - - c#3 - - -, - - - - e3 - - -").sound(instrument).gain(gainOthers).room(reverb)
+//$: note("- - - a2 - - - -, - - - d3 - - - -").sound(instrument).gain(gainOthers).room(reverb)
+//$: note("- c#3 - - - - - -, - e3 - - - - - -").sound(instrument).gain(gainOthers).room(reverb)
+//$: note("- - - - - - - d2, - - - - - - - -").sound(instrument).gain(gainOthers).room(reverb)
+//$: note("- - - - - a2 - -, - - - - - d3 - -").sound(instrument).gain(gainOthers).room(reverb)
+//$: note("a2 - - - - - - -, d3 - - - - - - -").sound(instrument).gain(gainOthers).room(reverb)
+
+// player 4
+
+// player 5
+
+// player 6 (same as player 1 to start)
+//$: note("f#3 b3 c#4 b3 c#4 f#3 b3 c#4, - d4 e4 d4 f#4 - d4 e4").sound(instrument).gain(gainMain).room(reverb).pan(1)
+
+let bar12 = "-"
+bar12 = "- d3 c#3 d3 f#3 - f#4 e4, - - - - - - - f#4"
 
 $: note(bar12)
   .sound(instrument)
-//  .gain(gainOthers)
-  .gain(gainMain)
+  .gain(gainOthers)
   .room(reverb)
   .pan(0.5) 
+*/
