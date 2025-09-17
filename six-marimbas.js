@@ -3,12 +3,16 @@
 // script by jimthurston
 // https://www.youtube.com/watch?v=cbbX1f5p7Lo
 
+
 samples
 (
   {
     marimba: ['Marimba_hit_Outrigger_C2_loud_01.wav', 'Marimba_hit_Outrigger_C4_loud_01.wav', 'Marimba_hit_Outrigger_C6_loud_01.wav'],
   }, 'https://raw.githubusercontent.com/sgossner/VCSL/refs/heads/master/Idiophones/Struck%20Idiophones/Marimba/'
 );
+
+
+//samples('shabda:marimba:3')
 
 setcpm(192/4)
 
@@ -33,7 +37,6 @@ p3[1] = "d2 a3 c#3 a3 c#3 d2 a3 c#3, - d3 e3 d3 f#3 - d3 e3"
 p4[1] = p5[1] = "-"
 
 p4[2] = p5[2] = "- - - - - - c#3 -, - - - - - - f#3 -"
-
 p4[3] = p5[3] = " - - d2 - - - c#3 -, - - - - - - f#3 -"
 p4[4] = p5[4] = " - - d2 - c#3 - c#3 -, - - - - e3 - f#3 -"
 p4[5] = p5[5] = " - - d2 a2 c#3 - c#3 -, - - - d3 e3 - f#3 -"
@@ -44,6 +47,15 @@ p4[9] = p5[9] = " a2 c#3 d2 a2 c#3 a2 c#3 d2, d3 e3 - d3 e3 d3 f#3 -"
 
 p6[10] = "- d3 c#3 d3 f#3 - f#4 e4, - - - - - - - f#4"
 
+// initialise player parts
+var player1 = ''
+var player2 = ''
+var player3 = ''
+var player4 = ''
+var player5 = ''
+var player6 = ''
+
+/*
 // set the initial part for all players
 var player1 = p1[1]
 var player2 = p2[1]
@@ -51,21 +63,33 @@ var player3 = p3[1]
 var player4 = p4[1]
 var player5 = p5[1]
 var player6 = p6[1]
-
+*/
 
 // declare which part we're on
 var currentPart = 1
-//currentPart = 2
-//currentPart = 3
-//currentPart = 4
-//currentPart = 5
-//currentPart = 6
-//currentPart = 7
-//currentPart = 8
-//currentPart = 9
-//currentPart = 10
+currentPart = 2
+currentPart = 3
+currentPart = 4
+currentPart = 5
+currentPart = 6
+currentPart = 7
+currentPart = 8
+currentPart = 9
+currentPart = 10
 
-// use currentPart to determine what each player is playing.  If there isn't one don't change it for this player
+// use currentPart to determine what each player is playing.  If there isn't one go back until there is
+var currentPartP1 = currentPart
+
+while (player1 == '')
+{
+  if(typeof p1[currentPartP1] !== 'undefined') 
+    player1 = p1[currentPartP1]
+  else if(currentPartP1 != 1)
+    currentPartP1--
+  else
+    break
+}
+
 if(typeof p1[currentPart] !== 'undefined') 
   player1 = p1[currentPart]
 
