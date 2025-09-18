@@ -67,15 +67,15 @@ var player6 = p6[1]
 
 // declare which part we're on
 var currentPart = 1
-currentPart = 2
-currentPart = 3
-currentPart = 4
-currentPart = 5
-currentPart = 6
-currentPart = 7
-currentPart = 8
-currentPart = 9
-currentPart = 10
+//currentPart = 2
+//currentPart = 3
+//currentPart = 4
+//currentPart = 5
+//currentPart = 6
+//currentPart = 7
+//currentPart = 8
+//currentPart = 9
+//currentPart = 10
 
 // use currentPart to determine what each player is playing.  If there isn't one go back until there is
 var currentPartP1 = currentPart
@@ -90,6 +90,57 @@ while (player1 == '')
     break
 }
 
+while (player2 == '')
+{
+  if(typeof p2[currentPartP2] !== 'undefined') 
+    player2 = p2[currentPartP2]
+  else if(currentPartP2 != 1)
+    currentPartP2--
+  else
+    break
+}
+
+while (player3 == '')
+{
+  if(typeof p3[currentPartP3] !== 'undefined') 
+    player3 = p3[currentPartP3]
+  else if(currentPartP3 != 1)
+    currentPartP3--
+  else
+    break
+}
+
+while (player4 == '')
+{
+  if(typeof p4[currentPartP4] !== 'undefined') 
+    player4 = p4[currentPartP4]
+  else if(currentPartP4 != 1)
+    currentPartP4--
+  else
+    break
+}
+
+while (player5 == '')
+{
+  if(typeof p5[currentPartP5] !== 'undefined') 
+    player5 = p5[currentPartP5]
+  else if(currentPartP5 != 1)
+    currentPartP5--
+  else
+    break
+}
+
+while (player6 == '')
+{
+  if(typeof p6[currentPartP6] !== 'undefined') 
+    player6 = p6[currentPartP6]
+  else if(currentPartP6 != 1)
+    currentPartP6--
+  else
+    break
+}
+
+/*
 if(typeof p1[currentPart] !== 'undefined') 
   player1 = p1[currentPart]
 
@@ -107,7 +158,7 @@ if(typeof p5[currentPart] !== 'undefined')
 
 if(typeof p6[currentPart] !== 'undefined') 
   player6 = p6[currentPart]
-
+*/
 
 // play the notes
 
