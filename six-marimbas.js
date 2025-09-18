@@ -79,6 +79,11 @@ var currentPart = 1
 
 // use currentPart to determine what each player is playing.  If there isn't one go back until there is
 var currentPartP1 = currentPart
+var currentPartP2 = currentPart
+var currentPartP3 = currentPart
+var currentPartP4 = currentPart
+var currentPartP5 = currentPart
+var currentPartP6 = currentPart
 
 while (player1 == '')
 {
