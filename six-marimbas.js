@@ -55,27 +55,17 @@ var player4 = ''
 var player5 = ''
 var player6 = ''
 
-/*
-// set the initial part for all players
-var player1 = p1[1]
-var player2 = p2[1]
-var player3 = p3[1]
-var player4 = p4[1]
-var player5 = p5[1]
-var player6 = p6[1]
-*/
-
 // declare which part we're on
 var currentPart = 1
-//currentPart = 2
-//currentPart = 3
-//currentPart = 4
-//currentPart = 5
-//currentPart = 6
-//currentPart = 7
-//currentPart = 8
-//currentPart = 9
-//currentPart = 10
+currentPart = 2
+currentPart = 3
+currentPart = 4
+currentPart = 5
+currentPart = 6
+currentPart = 7
+currentPart = 8
+currentPart = 9
+currentPart = 10
 
 // use currentPart to determine what each player is playing.  If there isn't one go back until there is
 var currentPartP1 = currentPart
@@ -144,26 +134,6 @@ while (player6 == '')
   else
     break
 }
-
-/*
-if(typeof p1[currentPart] !== 'undefined') 
-  player1 = p1[currentPart]
-
-if(typeof p2[currentPart] !== 'undefined') 
-  player2 = p2[currentPart]
-
-if(typeof p3[currentPart] !== 'undefined') 
-  player3 = p3[currentPart]
-
-if(typeof p4[currentPart] !== 'undefined') 
-  player4 = p4[currentPart]
-
-if(typeof p5[currentPart] !== 'undefined') 
-  player5 = p5[currentPart]
-
-if(typeof p6[currentPart] !== 'undefined') 
-  player6 = p6[currentPart]
-*/
 
 // play the notes
 
