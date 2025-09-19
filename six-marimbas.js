@@ -3,13 +3,21 @@
 // script by jimthurston
 // https://www.youtube.com/watch?v=cbbX1f5p7Lo
 
-
 samples
 (
   {
-    marimba: ['27 p.wav'],
-  }, 'https://raw.githubusercontent.com/sfzinstruments/Terkelsen.Marimba/refs/heads/master/samples/'
+    marimba:
+    {
+      c2: '24 p.wav',
+      c3: '36 p.wav',
+      c4: '48 p.wav',
+      c5: '60 p.wav',
+      c6: '72 p.wav'
+    },
+  },
+  'https://raw.githubusercontent.com/sfzinstruments/Terkelsen.Marimba/refs/heads/master/samples/'
 );
+
 /*
 samples
 (
