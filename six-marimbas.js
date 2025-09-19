@@ -56,6 +56,15 @@ p6[12] = "- d3 c#3 d3 f#3 - d4 c#4, - - - - - - - f#3"
 p5[14] = "f#3 g3 f#3 g3 f#3 f#3 g3 f#3"
 p6[17] = "-"
 p6[18] = "f#3 g3 a3 b3 c#4 f#3 d4 c#4"
+p5[21] = "-"
+
+p5[22] = "f#3 d4 c#4 d4 c#4 f#3 d4 c#4"
+p5[23] = "- d4 c#4 d4 c#4 f#3 d4 c#4"
+p5[24] = "f#3 d4 c#4 d4 c#4 f#3 d4 c#4"
+p5[25] = "- d4 c#4 d4 c#4 f#3 d4 c#4"
+p5[26] = "f#3 d4 c#4 d4 c#4 f#3 d4 c#4"
+p5[27] = "- d4 c#4 d4 c#4 f#3 d4 c#4"
+
 
 // initialise player parts
 var player1 = ''
@@ -66,7 +75,7 @@ var player5 = ''
 var player6 = ''
 
 // declare which part we're on (increment this)
-var currentPart = 18
+var currentPart = 27
 
 // use currentPart to determine what each player is playing.  If there isn't one go back until there is
 var currentPartP1 = currentPart
