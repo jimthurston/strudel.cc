@@ -39,19 +39,23 @@ p5[1] = "-"
 p6[1] = p1[1]
 
 p4[2] = p5[2] = "- - - - - - c#3 -, - - - - - - f#3 -"
-p4[3] = p5[3] = " - - d2 - - - c#3 -, - - - - - - f#3 -"
-p4[4] = p5[4] = " - - d2 - c#3 - c#3 -, - - - - e3 - f#3 -"
-p4[5] = p5[5] = " - - d2 a2 c#3 - c#3 -, - - - d3 e3 - f#3 -"
-p4[6] = p5[6] = " - c#3 d2 a2 c#3 - c#3 -, - e3 - d3 e3 - f#3 -"
-p4[7] = p5[7] = " - c#3 d2 a2 c#3 - c#3 d2, - e3 - d3 e3 - f#3 -"
-p4[8] = p5[8] = " - c#3 d2 a2 c#3 a2 c#3 d2, - e3 - d3 e3 d3 f#3 -"
-p4[9] = p5[9] = " a2 c#3 d2 a2 c#3 a2 c#3 d2, d3 e3 - d3 e3 d3 f#3 -"
+p4[3] = p5[3] = "- - d2 - - - c#3 -, - - - - - - f#3 -"
+p4[4] = p5[4] = "- - d2 - c#3 - c#3 -, - - - - e3 - f#3 -"
+p4[5] = p5[5] = "- - d2 a2 c#3 - c#3 -, - - - d3 e3 - f#3 -"
+p4[6] = p5[6] = "- c#3 d2 a2 c#3 - c#3 -, - e3 - d3 e3 - f#3 -"
+p4[7] = p5[7] = "- c#3 d2 a2 c#3 - c#3 d2, - e3 - d3 e3 - f#3 -"
+p4[8] = p5[8] = "- c#3 d2 a2 c#3 a2 c#3 d2, - e3 - d3 e3 d3 f#3 -"
+p4[9] = p5[9] = "a2 c#3 d2 a2 c#3 a2 c#3 d2, d3 e3 - d3 e3 d3 f#3 -"
 
 // part 10 should fade
 
 p5[11] = "-"
 p6[11] = "-"
 p6[12] = "- d3 c#3 d3 f#3 - d4 c#4, - - - - - - - f#3"
+
+p5[14] = "f#3 g3 f#3 g3 f#3 f#3 g3 f#3"
+p6[17] = "-"
+p6[18] = "f#3 g3 a3 b3 c#4 f#3 d4 c#4"
 
 // initialise player parts
 var player1 = ''
@@ -62,7 +66,7 @@ var player5 = ''
 var player6 = ''
 
 // declare which part we're on (increment this)
-var currentPart = 12
+var currentPart = 18
 
 // use currentPart to determine what each player is playing.  If there isn't one go back until there is
 var currentPartP1 = currentPart
