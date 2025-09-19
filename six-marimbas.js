@@ -8,11 +8,15 @@ samples
   {
     marimba:
     {
-      c2: '24 p.wav',
-      c3: '36 p.wav',
-      c4: '48 p.wav',
-      c5: '60 p.wav',
-      c6: '72 p.wav'
+      'c2': '24 p.wav',
+      'f#2': '30 p.wav',
+      'c3': '36 p.wav',
+      'f#3': '42 p.wav',
+      'c4': '48 p.wav',
+      'f#4': '54 p.wav',
+      'c5': '60 p.wav',
+      'f#5': '66 p.wav',
+      'c6': '72 p.wav'
     },
   },
   'https://raw.githubusercontent.com/sfzinstruments/Terkelsen.Marimba/refs/heads/master/samples/'
