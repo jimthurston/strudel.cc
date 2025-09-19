@@ -7,19 +7,25 @@
 samples
 (
   {
+    marimba: ['27 p.wav'],
+  }, 'https://raw.githubusercontent.com/sfzinstruments/Terkelsen.Marimba/refs/heads/master/samples/'
+);
+/*
+samples
+(
+  {
     marimba: ['Marimba_hit_Outrigger_C2_loud_01.wav', 'Marimba_hit_Outrigger_C4_loud_01.wav', 'Marimba_hit_Outrigger_C6_loud_01.wav'],
   }, 'https://raw.githubusercontent.com/sgossner/VCSL/refs/heads/master/Idiophones/Struck%20Idiophones/Marimba/'
 );
-
-
+*/
 //samples('shabda:marimba:3')
 
 setcpm(192/4)
 
-const instrument = "marimba:0" //xylophone_medium_ff, marimba too quiet!
-const gainMain = 1
-const gainOthers = 2
-const reverb = 0.25
+const instrument = "marimba" //xylophone_medium_ff, marimba too quiet!
+const gainMain = 0.3
+const gainOthers = 0.6
+const reverb = 0.3
 
 //all(pianoroll)
 
@@ -75,7 +81,7 @@ var player5 = ''
 var player6 = ''
 
 // declare which part we're on (increment this)
-var currentPart = 27
+var currentPart = 1
 
 // use currentPart to determine what each player is playing.  If there isn't one go back until there is
 var currentPartP1 = currentPart
