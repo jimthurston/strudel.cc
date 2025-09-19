@@ -158,20 +158,20 @@ $: note(player3)
 // player 4
 $: note(player4)
   .sound(instrument)
-  .gain(gainMain)
+  .gain(gainOthers)
   .room(reverb)
   .pan(0.66)
 
 // player 5
 $: note(player5)
   .sound(instrument)
-  .gain(gainMain)
+  .gain(gainOthers)
   .room(reverb)
   .pan(0.5)
 
 // player 6
 $: note(player6)
   .sound(instrument)
-  .gain(gainMain)
+  .gain(gainOthers)
   .room(reverb)
   .pan(0.5)
